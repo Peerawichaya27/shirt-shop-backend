@@ -1,8 +1,7 @@
 # Makefile for building and managing the Shirt Shop Backend
 
-# Variables
-DOCKER_COMPOSE=docker-compose
-MVN=mvn
+# Variable for project directory
+PROJECT_DIR=./backend
 
 # Main targets
 all: build
@@ -10,12 +9,12 @@ all: build
 # Build the application using Maven
 build:
 	@echo "Building the application..."
-	$(MVN) clean install
+	cd $(PROJECT_DIR) && mvn clean install
 
 # Run the application
 run:
 	@echo "Running the application..."
-	$(MVN) spring-boot:run
+	cd $(PROJECT_DIR) && mvn spring-boot:run
 
 # Start the PostgreSQL database using Docker
 postgres:
@@ -45,7 +44,7 @@ removedb:
 # Clean the project
 clean:
 	@echo "Cleaning up..."
-	$(MVN) clean
+	cd $(PROJECT_DIR) && mvn clean
 	docker system prune -f
 
 .PHONY: all build run postgres createdb dropdb stopdb removedb clean
