@@ -1,7 +1,7 @@
 # Shirt Shop Backend
 
 ## Overview
-This project is the backend service for the Shirt Shop application, handling all data management and business logic. It provides APIs for user authentication, product management, order processing, and more.
+This project is the backend service for the ecommerce application, handling all data management and business logic. It provides APIs for user authentication, product management, order processing, and more.
 
 ## Technologies Used
 - **Java**: Core programming language used for backend development.
